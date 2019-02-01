@@ -148,7 +148,14 @@ def problem5(seq_of_seq):
     # TODO: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    while True:
+        a = 0
+        for k in range(len(seq_of_seq)):
+            sub = seq_of_seq[k]
+            for s in range(len(sub)):
+                if sub[s] > a:
+                    a = a + sub[s]
+        return a
 
 ###############################################################################
 # Our tests use the following to print error messages in red.
